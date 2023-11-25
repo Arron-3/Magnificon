@@ -17,4 +17,6 @@ router.delete("/delete/:id", UserController.deleteUserById);
 
 router.get("/getByRole/driver", UserController.getRoleDriver);
 
+router.put("/update-password/:email", UserController.updatePasswordByEmail);
+
 module.exports = router;

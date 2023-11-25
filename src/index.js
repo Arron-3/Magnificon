@@ -12,6 +12,7 @@ const TruckRouter = require("./routes/TruckRouter");
 const MaintenanceRouter = require("./routes/MaintenanceRouter");
 const ReportIncidentRouter = require("./routes/ReportIncidentRouter");
 const FuelConsumptionRouter = require("./routes/FuelConsumptionRouter");
+const EmailRouter = require("./routes/EmailRouter");
 
 const app = express();
 app.use(express.json());
@@ -43,8 +44,9 @@ app.use("/api/truck", TruckRouter);
 app.use("/api/maintenance", MaintenanceRouter);
 app.use("/api/report-incident", ReportIncidentRouter);
 app.use("/api/fuel-consumption", FuelConsumptionRouter);
+app.use("/api/email", EmailRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 app.listen(PORT, () => {
   connect();
   console.log(`server is listening to port ${PORT}`);

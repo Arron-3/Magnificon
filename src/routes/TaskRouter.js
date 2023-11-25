@@ -11,4 +11,6 @@ router.put("/update/:id", TaskController.updateTaskById);
 
 router.get("/getByEmail/:email", TaskController.getTaskByEmailAndStatus);
 
+router.get("/getTaskByEmail/email/:email", TaskController.getTaskByEmail);
+
 module.exports = router;

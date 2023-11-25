@@ -132,6 +132,22 @@ const getRoleDriver = async (req, res) => {
   }
 };
 
+const updatePasswordByEmail = async (req, res) => {
+  const { password } = req.body;
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  try {
+    const user = await UserModel.findOneAndUpdate(
+      { email: req.params.email },
+      { password: hashedPassword }
+    );
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
@@ -141,4 +157,5 @@ module.exports = {
   updateUserById,
   getUserById,
   getRoleDriver,
+  updatePasswordByEmail,
 };

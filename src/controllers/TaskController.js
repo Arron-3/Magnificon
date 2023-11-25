@@ -52,10 +52,22 @@ const getTaskByEmailAndStatus = async (req, res, next) => {
   }
 };
 
+const getTaskByEmail = async (req, res, next) => {
+  try {
+    const task = await TaskModel.find({
+      email: req.params.email,
+    });
+    res.status(200).json(task);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   createTask,
   getTaskById,
   getTaskList,
   updateTaskById,
   getTaskByEmailAndStatus,
+  getTaskByEmail,
 };
