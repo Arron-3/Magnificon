@@ -7,4 +7,6 @@ router.get("/:id", ReportIncidentController.getReportIncidentById);
 
 router.get("/", ReportIncidentController.getReportIncidentList);
 
+router.get("/count/:filter", ReportIncidentController.getReportIncidentCount);
+
 module.exports = router;

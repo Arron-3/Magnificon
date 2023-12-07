@@ -7,4 +7,6 @@ router.get("/:id", FuelConsumptionController.getFuelConsumptionById);
 
 router.get("/", FuelConsumptionController.getFuelConsumptionList);
 
+router.get("/count/:filter", FuelConsumptionController.getFuelConsumptionCount);
+
 module.exports = router;

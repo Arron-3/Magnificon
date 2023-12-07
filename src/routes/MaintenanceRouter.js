@@ -7,4 +7,6 @@ router.get("/:id", MaintenanceController.getMaintenanceById);
 
 router.get("/", MaintenanceController.getMaintenanceList);
 
+router.get("/count/:filter", MaintenanceController.getMaintenanceCount);
+
 module.exports = router;
