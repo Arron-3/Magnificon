@@ -26,6 +26,10 @@ const PreventiveMaintenance = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
+    truck: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
