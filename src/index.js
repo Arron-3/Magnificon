@@ -13,6 +13,7 @@ const MaintenanceRouter = require("./routes/MaintenanceRouter");
 const ReportIncidentRouter = require("./routes/ReportIncidentRouter");
 const FuelConsumptionRouter = require("./routes/FuelConsumptionRouter");
 const EmailRouter = require("./routes/EmailRouter");
+const PreventiveMaintenanceRouter = require("./routes/PreventiveMaintenanceRouter");
 
 const app = express();
 app.use(express.json());
@@ -45,6 +46,7 @@ app.use("/api/maintenance", MaintenanceRouter);
 app.use("/api/report-incident", ReportIncidentRouter);
 app.use("/api/fuel-consumption", FuelConsumptionRouter);
 app.use("/api/email", EmailRouter);
+app.use("/api/preventive-maintenance", PreventiveMaintenanceRouter);
 
 const PORT = 5000;
 app.listen(PORT, () => {
