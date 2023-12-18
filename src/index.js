@@ -48,7 +48,7 @@ app.use("/api/fuel-consumption", FuelConsumptionRouter);
 app.use("/api/email", EmailRouter);
 app.use("/api/preventive-maintenance", PreventiveMaintenanceRouter);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   connect();
   console.log(`server is listening to port ${PORT}`);
