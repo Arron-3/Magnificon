@@ -26,6 +26,34 @@ const PreventiveMaintenance = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
+    coolant: {
+      type: Boolean,
+      required: true,
+    },
+    tirePressure: {
+      type: Boolean,
+      required: true,
+    },
+    filters: {
+      type: Boolean,
+      required: true,
+    },
+    fluids: {
+      type: Boolean,
+      required: true,
+    },
+    blinkerLights: {
+      type: Boolean,
+      required: true,
+    },
+    allLights: {
+      type: Boolean,
+      required: true,
+    },
+    battery: {
+      type: Boolean,
+      required: true,
+    },
     truck: {
       type: String,
       required: true,
