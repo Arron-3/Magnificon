@@ -52,10 +52,26 @@ const updateTruckById = async (req, res) => {
   }
 };
 
+const getTruckByDriverName = async (req, res) => {
+  if (!req.params.driverName) {
+    return console.log("No result");
+  }
+
+  try {
+    const Truck = await TruckModel.findOne({
+      driverName: req.params.driverName,
+    });
+    res.status(200).json(Truck);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 module.exports = {
   createTruck,
   getTruckById,
   getTruckList,
   deleteTruckById,
   updateTruckById,
+  getTruckByDriverName,
 };

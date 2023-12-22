@@ -25,6 +25,9 @@ const TaskSchema = new mongoose.Schema(
       type: String,
       default: "Pending",
     },
+    taskLocation: {
+      type: String,
+    },
   },
   {
     timestamps: true,
