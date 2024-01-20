@@ -7,10 +7,7 @@ router.get("/:id", TruckController.getTruckById);
 
 router.get("/", TruckController.getTruckList);
 
-router.get(
-  "/get/byDriverName/:driverName",
-  TruckController.getTruckByDriverName
-);
+router.get("/email/:email", TruckController.getTruckByEmail);
 
 router.delete("/delete/:id", TruckController.deleteTruckById);
 

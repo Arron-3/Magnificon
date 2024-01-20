@@ -2,14 +2,25 @@ const mongoose = require("mongoose");
 
 const TaskSchema = new mongoose.Schema(
   {
-    // driverName: {
-    //   type: String,
-    //   required: true,
-    // },
     email: {
       type: String,
     },
     plateNumber: {
+      type: String,
+    },
+    straightDesign: {
+      type: String,
+    },
+    quantity: {
+      type: Number,
+    },
+    aggregate: {
+      type: String,
+    },
+    maxSlump: {
+      type: String,
+    },
+    addMixture: {
       type: String,
     },
     latitude: {

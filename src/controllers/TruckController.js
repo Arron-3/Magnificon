@@ -52,18 +52,12 @@ const updateTruckById = async (req, res) => {
   }
 };
 
-const getTruckByDriverName = async (req, res) => {
-  if (!req.params.driverName) {
-    return console.log("No result");
-  }
-
+const getTruckByEmail = async (req, res, next) => {
   try {
-    const Truck = await TruckModel.findOne({
-      driverName: req.params.driverName,
-    });
+    const Truck = await TruckModel.findOne({ email: req.params.email });
     res.status(200).json(Truck);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 };
 
@@ -73,5 +67,5 @@ module.exports = {
   getTruckList,
   deleteTruckById,
   updateTruckById,
-  getTruckByDriverName,
+  getTruckByEmail,
 };

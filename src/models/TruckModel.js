@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 
 const TruckSchema = new mongoose.Schema(
   {
+    email: {
+      type: String,
+    },
     driverName: {
       type: String,
     },

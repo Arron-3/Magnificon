@@ -11,7 +11,7 @@ const createTask = async (req, res) => {
 
 const getTaskById = async (req, res) => {
   try {
-    const task = await TaskModel.findById(req.params._id);
+    const task = await TaskModel.findById(req.params.id);
     res.status(200).json(task);
   } catch (err) {
     console.log(err);
